@@ -23,7 +23,9 @@ For this study, I use data from the German Family Panel (pairfam) across 7 waves
 
 On the whole, I find that the percentage of adolescent girls reporting borderline to abnormal symptoms on the emotional symptoms scale is higher than that of adolescent boys, while the percentage of adolescent boys reporting borderline to abnormal symptoms on the conduct problems scale is higher than that of girls. Further, the average score of adolescents on the conduct problems scale with unmarried parents is higher in each wave than those with married parents, indicating the presence of greater problematic symptoms in the former. The regression analysis shows that gender is a significant predictor of adolescent wellbeing irrespective of parents' marital status, with girls reporting higher scores on the emotional symptoms scale, and boys reporting higher scores on the conduct problems scale. Adolescents with divorced parents also report a higher score on the conduct problems scale by 0.22 units than adolescents with married parents.
 
-[This poster](files/Thesis Poster.pdf) describes the main findings from my thesis.
+The poster below describes the main findings from my thesis.
+
+![](files/Thesis Poster.jpg)
 
 
 &nbsp;

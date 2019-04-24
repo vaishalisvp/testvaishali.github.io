@@ -19,6 +19,8 @@ output:
 
 The institution of family in Europe is rapidly evolving, from a standard "nuclear family" model (a household with a married heterosexual couple and their biological children) to a variety of lifestyles, including partnership with no children and homosexual partnerships. In this thesis, I examine the impact of family structure, in particular, parental separation on adolescent wellbeing in Germany. For this study, I use data from the German Family Panel (pairfam) across 7 waves: 2009-10 to 2015-16, and I conduct Pooled OLS and Fixed Effects Modeling in order to understand between-subject and within-subject variations in individual wellbeing respectively. 
 
+The code for this analysis can be found [here](https://github.com/vaishalisvp/masters-thesis).
+
 &nbsp;
 &nbsp;
 
@@ -27,6 +29,9 @@ The institution of family in Europe is rapidly evolving, from a standard "nuclea
 
 In this project, I examine the role of "influencers" on social media movements such as #MeToo. In particular, I seek to answer questions such as: do these influencers write original tweets on Twitter, or mostly retweet/endorse other #MeToo tweets? How can one capture the sentiment of these tweets (mostly positive or negative, or more nuanced such as optimistic vs. cautious?). For this, I extract tweets from verified Twitter users and examine the content of these tweets through various visualizations.
 
+The code for this analysis can be found [here](https://github.com/vaishalisvp/metoo-analysis).
+
+
 &nbsp;
 &nbsp;
 
@@ -34,6 +39,9 @@ In this project, I examine the role of "influencers" on social media movements s
 ### [FRIENDS - sentiment analysis](./friends.html)
 
 FRIENDS is a very popular American television sitcom, it wouldn't be much of a stretch to say that it was one of the cultural artefacts that defined the 90's for a lot of us. It has been 15 years since the show went off air, but FRIENDS still enjoys a considerable fan following even today. In this project, I examine the dialogues across all 10 seasons of FRIENDS, in order to better understand the "mood" of the show and the popular sentiments expressed throughout. I am also interested in the attitudes of the lead characters of the show towards gender, in particular the way men and women are referred to in the sitcom.
+
+The code for this analysis can be found [here](https://github.com/vaishalisvp/FRIENDS-sentiment-analysis).
+
 
 
 &nbsp;
