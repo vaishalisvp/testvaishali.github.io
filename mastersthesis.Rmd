@@ -1,0 +1,44 @@
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+&nbsp;
+&nbsp;
+
+## The gendered impact of parental separation on adolescent wellbeing in Germany 
+
+&nbsp;
+
+The institution of family in Europe is rapidly evolving, from a standard "nuclear family" model (a household with a married heterosexual couple and their biological children) to a variety of lifestyles, including partnership with no children and homosexual partnerships (Euteneuer, 2011). Marriage rates in Europe have consequently decreased with time, from 7.64 marriages per 1000 persons in 1965 to 4.87 in 2007 (Kreyenfeld & Konietzka, 2017), and single-parent households are becoming increasingly common, particularly in Denmark, the United Kingdom and East Germany (ibid, 2011). Further, the share of newborn children in Germany whose parents are unmarried has more than doubled in the last 25 years, from 15% in 1990 to around 35% in the year 2015 (Federal Statistical Office, (Destatis), accessed April 20, 2018d).
+
+In this thesis, I examine the impact of family structure, in particular, parental separation on adolescent wellbeing in Germany. In particular, I seek to examine the gendered differences in adolescent wellbeing to parental separation, in line with Videon (2002), who argues that opposite-sex parents have a significant influence on adolescent depression regardless of family form. 
+
+I examine two questions, which are as follows:  
+
+1. What is the impact of family structure in general, and parental separation in particular on adolescent well-being in contemporary Germany?  
+2. Are there significant gender differences in adolescent wellbeing after controlling for parent's marital status?  
+
+For this study, I use data from the German Family Panel (pairfam) across 7 waves: 2009-10 to 2015-16. In particular, I examine self-reported measures of adolescent wellbeing on two dimensions - emotional symptoms and conduct problems, as well as other factors such as parents' marital status, ethnicity, level of education and household income. In terms of methodology, I conduct Pooled OLS and Fixed Effects Modeling in order to understand between-subject and within-subject variations respectively.  
+
+On the whole, I find that the percentage of adolescent girls reporting borderline to abnormal symptoms on the emotional symptoms scale is higher than that of adolescent boys, while the percentage of adolescent boys reporting borderline to abnormal symptoms on the conduct problems scale is higher than that of girls. Further, the average score of adolescents on the conduct problems scale with unmarried parents is higher in each wave than those with married parents, indicating the presence of greater problematic symptoms in the former. The regression analysis shows that gender is a significant predictor of adolescent wellbeing irrespective of parents' marital status, with girls reporting higher scores on the emotional symptoms scale, and boys reporting higher scores on the conduct problems scale. Adolescents with divorced parents also report a higher score on the conduct problems scale by 0.22 units than adolescents with married parents.
+
+[This poster](files/Thesis Poster.pdf) describes the main findings from my thesis.
+
+
+&nbsp;
+
+####References
+
+Euteneuer, M. (2011). _Wellbeing of families in future Europe: Challenges for research and policy-familyplatform-families in Europe vol. 1_ (Vol. 1). Lulu. com.
+
+Federal Statistical Office, (Destatis). (accessed April 20, 2018a). _43 million households in 2035._ Retrieved from https://www.destatis.de/EN/PressServices/Press/pr/2017/02/PE17_067_122.html
+
+Kreyenfeld, M., & Konietzka, D. (2017). _Childlessness in Europe: Contexts, causes, and consequences._ Springer.
+
+Videon, T. M. (2002). The effects of parent-adolescent relationships and parental separation on adolescent well-being. _Journal of Marriage and Family, 64_(2), 489-503.
+
+
+
+
+

@@ -1,0 +1,21 @@
+name: "Vaishali Venkatesh Prasad"
+output_dir: "."
+navbar:
+  title: "Vaishali Venkatesh Prasad"
+  left:
+    - text: "CV"
+      href: VaishaliV_CurriculumVitae.pdf
+    - text: "Projects"
+      href: posts.html
+
+  right:
+    - icon: fa-envelope fa-lg
+      href: mailto:vaishalisvp@gmail.com
+    - icon: fa-github fa-lg
+      href: http://github.com/vaishalisvp
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/vaishaliv/
+output:
+  html_document:
+    theme: paper
+    css: 'styles.css'

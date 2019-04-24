@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 64px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h2 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h3 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h4 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h5 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h6 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Vaishali Venkatesh Prasad</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="VaishaliV_CurriculumVitae.pdf">CV</a>
+</li>
+<li>
+  <a href="posts.html">Projects</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="mailto:vaishalisvp@gmail.com">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="http://github.com/vaishalisvp">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.linkedin.com/in/vaishaliv/">
+    <span class="fa fa-linkedin fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<p>   </p>
+<div id="the-one-with-all-the-sentiment-analysis" class="section level2">
+<h2>The One With All The Sentiment Analysis</h2>
+<p> </p>
+<div class="figure">
+<img src="images/plots/FRIENDSimage.jpg" />
+
+</div>
+<p> </p>
+<p>FRIENDS is a very popular American television sitcom, it wouldn’t be much of a stretch to say that it was one of the cultural artefacts that defined the 90’s for a lot of us. It has been 15 years since the show went off air, but FRIENDS still enjoys a considerable fan following even today. Perhaps this is because it is a very feel-good show - something you can watch when you in the mood for something lighthearted.</p>
+<p>In this project, I examine the dialogues across all 10 seasons of FRIENDS, in order to better understand the “mood” of the show and the popular sentiments expressed throughout. I am also interested in the attitudes of the lead characters of the show towards gender and sexuality - in conversations with other friends, we have often talked about how politically incorrect this sitcom could be - for instance, Chandler Bing’s open disgust of his gender non-conforming cross-dressing father, and other plots building on what is masculinity (and femininity). I thus examine the adjectives used to describe men and women in the sitcom. This is a preliminary analysis with plenty of scope for more interesting results in the future, so please do write to me if you have suggestions for future analysis.</p>
+<p>I obtained the dataset containing all the dialogues from all seasons of FRIENDS from <a href="http://giorasimchoni.com/2017/06/04/2017-06-04-the-one-with-friends/">Giora Simchoni’s comprehensive analysis of the lead characters on FRIENDS</a>. The dataset contains transcripts from 10 seasons, each season having around 24 episodes on average. The aggregate dataset contains 60,817 lines of dialogue, of which the most lines are spoken by the character Rachel Green (9192 lines), followed by Ross Geller (9072 lines).</p>
+<p>   </p>
+<div id="analysis-of-the-most-popular-words-from-the-sitcom" class="section level4">
+<h4>Analysis of the most popular words from the sitcom</h4>
+<p>I first unnest each line of dialogue into tokens so as to analyze sentiment by word. Then I filter out the stop words (for example “the”,“an” and so on) and perform a sentiment analysis with the AFINN lexicon on the filtered words. The <a href="https://darenr.github.io/afinn/">AFINN lexicon</a> rates words for valence with a score ranging from -5 (most negative) to +5 (most positive) - this providing a more nuanced insight into word sentiment than other lexicons. The below graph displays the most popular words from the sitcom by the word sentiment multiplied by frequency.</p>
+<div class="figure">
+<img src="images/plots/fig1.png" alt="The most popular words from FRIENDS" />
+<p class="caption">The most popular words from FRIENDS</p>
+</div>
+<p> </p>
+<p>I also examine the most popular words by sentiment - positive and negative - uttered throughout the sitcom - popularity here is measured by the frequency of occurences of the particular word. This is demonstrated in the following two graphs.</p>
+<div class="figure">
+<img src="images/plots/fig2.png" alt="Top 10 words of positive sentiment from FRIENDS" />
+<p class="caption">Top 10 words of positive sentiment from FRIENDS</p>
+</div>
+<p> </p>
+<p>This seems to lend credence to the theory that FRIENDS is a “feel-good” show - the most popular words with a positive sentiment are “wow”, “wonderful” and “win(s)”. On the other hand, the most popular words of a negative sentiment are “hell”, “ass” and “bitch”.</p>
+<div class="figure">
+<img src="images/plots/fig3.png" alt="Top 10 words of negative sentiment from FRIENDS" />
+<p class="caption">Top 10 words of negative sentiment from FRIENDS</p>
+</div>
+<p>   </p>
+</div>
+<div id="the-boys-are-bad-and-the-girls-are-beautiful" class="section level4">
+<h4>The boys are bad and the girls are beautiful</h4>
+<p>One of the things I am interested in examining is this sitcom’s attitudes towards gender and sexuality. FRIENDS has had a significant cultural impact - for one, in terms of its emphasis on <a href="http://www.buffalo.edu/news/releases/2004/04/6680.html">independence among the youth</a>. At the same time, the sitcom has been called out for its <a href="https://www.independent.co.uk/arts-entertainment/films/friends-netflix-sitcom-problem-sexism-men-joey-phoebe-chandler-ross-rachel-a8168976.html">problematic content</a> - for instance, the time when one of the main characters did not approve of his son playing with a Barbie doll, and blamed it on the influence of his lesbian ex-wife. In this analysis, I examine the way gender is described throughout the sitcom - for instance: a — man or a — female. To do this, I unnest the dataset into bigrams and filter the ones where the second word either refers to the masculine gender (man/men/male/boy(s)/guy(s)) or the feminine gender (woman/women/female/girl(s)). I then plot the most popular adjectives preceding the gender reference, as demonstrated in the graph below.</p>
+<div class="figure">
+<img src="images/plots/fig4.png" />
+
+</div>
+<p> </p>
+<p>The most popular reference among the masculine gender is that of the “naked guy”, a recurring trope in the show. The second most popular adjective is that of the “bad” boy. For the feminine gender, the most popular adjective used to describe them is “beautiful”, followed by “hot”. Among the adjectives with a more negative connotation, men in the show are described to be “stupid” or “crazy”, while the women are described as “noisy” or “annoying”.</p>
+<p>There is a lot more interesting analysis to be done on the show - examining attitudes towards race and LGBT communities for one. If there’s an idea you think is worth exploring, I’d love to hear more about it.</p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
