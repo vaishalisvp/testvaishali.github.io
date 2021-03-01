@@ -4,7 +4,7 @@ navbar:
   title: "Vaishali Venkatesh Prasad"
   left:
     - text: "CV"
-      href: VaishaliV_CurriculumVitae.pdf
+      href: Vaishali_CurriculumVitae.pdf
     - text: "Projects"
       href: posts.html
 
